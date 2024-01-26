@@ -3,7 +3,7 @@ package com.siddu.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AmazonTest extends BaseTest {
+public class MicrosoftTest extends BaseTest {
 
 	@Test
 	public void amazonTitle() {
@@ -13,11 +13,11 @@ public class AmazonTest extends BaseTest {
 		System.out.println("======================================================");
 
 		System.out.println("amazonTitle test");
-		amazonPage.navigateToUrl("https://www.amazon.com/");
+		microsoftPage.navigateToUrl("https://www.microsoft.com/en-sg");
 
-		System.out.println("Page title is : " + amazonPage.getTitle());
+		System.out.println("Page title is : " + microsoftPage.getTitle());
 
-		Assert.assertEquals(amazonPage.getTitle(), "Amazon.com. Spend less. Smile more.");
+		Assert.assertEquals(microsoftPage.getTitle(), microsoftTitle);
 
 	}
 

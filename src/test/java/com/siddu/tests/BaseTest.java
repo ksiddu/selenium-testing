@@ -1,5 +1,7 @@
 package com.siddu.tests;
 
+import static com.siddu.config.ConfigurationManager.configuration;
+
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -12,6 +14,7 @@ import com.siddu.driver.DriverManager;
 import com.siddu.driver.TargetFactory;
 import com.siddu.pages.AmazonPage;
 import com.siddu.pages.GooglePage;
+import com.siddu.pages.MicrosoftPage;
 import com.siddu.pages.YahooPage;
 import com.siddu.utils.BroswerFactory;
 
@@ -19,10 +22,14 @@ public class BaseTest {
 
 	protected WebDriver driver;
 	BroswerFactory bf = new BroswerFactory();
-	String browser = "chrome";
+	// String browser = "chrome";
+	String browser = configuration().browser();
 	GooglePage googlePage;
 	YahooPage yahooPage;
 	AmazonPage amazonPage;
+	MicrosoftPage microsoftPage;
+
+	String microsoftTitle = "Microsoft – Cloud, Computers, Apps & Gaming";
 
 	@BeforeTest(alwaysRun = true)
 	@Parameters("browser")
@@ -37,6 +44,7 @@ public class BaseTest {
 		googlePage = new GooglePage(driver);
 		yahooPage = new YahooPage(driver);
 		amazonPage = new AmazonPage(driver);
+		microsoftPage = new MicrosoftPage(driver);
 	}
 
 	@AfterTest(alwaysRun = true)

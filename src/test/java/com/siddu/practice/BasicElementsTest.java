@@ -124,13 +124,7 @@ public class BasicElementsTest extends PracticeBaseTest {
 		action.dragAndDrop(srcEle, dstEle).perform();
 
 		Thread.sleep(5000);
-		/*
-		 * // Wait for the element to be visible WebDriverWait wait = new
-		 * WebDriverWait(driver, Duration.ofSeconds(10));
-		 * wait.until(ExpectedConditions.visibilityOf(srcEleHeader));
-		 * wait.until(ExpectedConditions.visibilityOf(dstEleHeader));
-		 * 
-		 */
+
 		// https://www.linkedin.com/pulse/how-handle-stale-element-exception-selenium-while-testing-serhat-u%C3%A7ar#:~:text=This%20exception%20occurs%20when%20an,or%20the%20element's%20location%20changing.
 		// StaleElementReferenceException
 		try {
@@ -140,7 +134,7 @@ public class BasicElementsTest extends PracticeBaseTest {
 			// Try to locate the element again
 			srcEleHeader = driver.findElement(By.xpath("//div[@id='column-a']/header"));
 			dstEleHeader = driver.findElement(By.xpath("//div[@id='column-b']/header"));
-			// element.click();
+
 		}
 		Assert.assertEquals(srcEleHeader.getText(), "B");
 		Assert.assertEquals(dstEleHeader.getText(), "A");

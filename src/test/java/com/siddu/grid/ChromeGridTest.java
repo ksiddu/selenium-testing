@@ -27,7 +27,7 @@ public class ChromeGridTest {
 		chromeOptions.addArguments(START_MAXIMIZED);
 		chromeOptions.addArguments("--disable-infobars");
 		chromeOptions.addArguments("--disable-notifications");
-		//chromeOptions.addArguments(CHROME_HEADLESS);
+		// chromeOptions.addArguments(CHROME_HEADLESS);
 
 		// Define desired capabilities for the browser and platform you want to test
 		MutableCapabilities capabilities = new MutableCapabilities(chromeOptions);
@@ -38,22 +38,22 @@ public class ChromeGridTest {
 		// Create a RemoteWebDriver instance pointing to the hub
 		WebDriver driver = new RemoteWebDriver(hubUrl, capabilities);
 
-		System.out.println("googleTitle test");
+		System.out.println("Google Page - chrome browser test");
 
 		driver.get("https://www.google.com/");
 
-		System.out.println("Page title is : " + driver.getTitle());
+		System.out.println("chrome browser page title is : " + driver.getTitle());
 
 		// Your test code here
 		Assert.assertEquals(driver.getTitle(), "Google");
 
 		WebElement ele = driver.findElement(By.name("q"));
-		
+
 		ele.sendKeys("Siddu Kampli");
 		ele.sendKeys(Keys.ENTER);
-		
+
 		Thread.sleep(10000);
-		
+
 		// Close the WebDriver session
 		driver.quit();
 
