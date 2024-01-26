@@ -27,7 +27,7 @@ RUN ln -s /opt/firefox/firefox /usr/bin/firefox
 # download and install the geckodriver
 ENV GECKO_HOME=/usr/local/bin/geckodriver
 
-RUN curl -L "https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz" | tar xz -C /usr/local/bin
+RUN curl -L "https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-linux64.tar.gz" | tar xz -C /usr/local/bin
 
 RUN ls /usr/local/bin
 RUN ls -la /usr/local/bin
@@ -37,8 +37,16 @@ RUN ls -la /usr/local/bin
 #Copy source code and pom file.
 COPY src /apps/qa/src
 COPY pom.xml /apps/qa
+COPY testng.xml /apps/qa
 COPY smoke_testng.xml /apps/qa
 COPY regression_testng.xml /apps/qa
 COPY grid_testng.xml /apps/qa
 COPY firefox_grid_testng.xml /apps/qa
-ENTRYPOINT mvn clean test -P grid
+
+ENV env_profile smoke
+ENV env_target local
+ENV env_browser firefox
+ENV env_headless true
+
+
+ENTRYPOINT mvn clean test -P ${env_profile} -Dtarget=${env_target} -Dbrowser=${env_browser} -Dheadless=${env_headless}

@@ -1,0 +1,20 @@
+
+
+docker commands on MAC machine:
+=================================
+
+docker buildx build --platform linux/amd64 --no-cache=true -t selenium-test:1.0 .
+
+docker run --platform linux/amd64 --rm selenium-test:1.0
+
+without  env variables
+docker run --platform linux/amd64 --rm selenium-test:1.0
+
+with env variables
+docker run --platform linux/amd64 --rm -e "env_profile=regression" selenium-test:1.0
+
+mvn commands
+
+mvn clean test -P profile_name
+
+mvn clean test -P profile_name -Denv_arg1=value -Denv_arg2=value 
