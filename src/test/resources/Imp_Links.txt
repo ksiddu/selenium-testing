@@ -1,0 +1,88 @@
+
+Selenium 4 upgrade changes
+
+https://www.selenium.dev/documentation/webdriver/troubleshooting/upgrade_to_selenium_4/
+
+
+Demo Websites:
+
+https://bugbug.io/blog/software-testing/best-selenium-practice-websites/
+
+
+1. https://the-internet.herokuapp.com/
+2. https://demoqa.com/
+3. https://the-internet.herokuapp.com/dynamic_loading
+4. https://the-internet.herokuapp.com/upload
+5. https://the-internet.herokuapp.com/floating_menu
+6. https://www.saucedemo.com/
+7. https://www.demoblaze.com/
+8. https://formy-project.herokuapp.com/
+
+
+
+
+Selenium Tests for different actions
+
+waits:
+
+https://www.selenium.dev/documentation/webdriver/waits/
+
+
+https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java
+
+
+Dockerise Selenium Tests
+==========================
+
+https://medium.com/@sharmila.may5/steps-to-run-selenium-tests-in-docker-7610281a5581
+
+
+https://www.qatouch.com/blog/how-to-run-selenium-webdriver-with-docker/
+
+https://www.softwaretestinghelp.com/docker-selenium-tutorial/
+
+
+Framework Links
+===============
+
+https://eliasnogueira.com/the-best-way-to-create-browser-instances-using-the-factory-pattern-java-and-selenium-webdriver/
+
+
+
+https://eliasnogueira.com/easily-manage-properties-files-in-java-with-owner/
+
+
+
+https://github.com/eliasnogueira/selenium-java-browser-factory/blob/main/docker-compose.yml
+
+
+
+https://eliasnogueira.com/how-to-use-the-factory-design-pattern-to-create-browser-instances-the-simple-approach/
+
+
+
+https://eliasnogueira.com/easily-manage-properties-files-in-java-with-owner/
+
+
+https://github.com/eliasnogueira/selenium-java-lean-test-architecture
+
+
+https://qaautomation.expert/2022/07/29/selenium-4-grid-parallel-testing/
+
+
+https://www.numpyninja.com/post/parallel-execution-using-selenium-grid
+
+
+https://www.toolsqa.com/testng/testng-parallel-execution/
+
+
+
+Debian JDK update:
+
+https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-debian-9#setting-the-java_home-environment-variable
+
+
+https://linuxize.com/post/install-java-on-debian-9/
+
+
+https://phoenixnap.com/kb/check-java-version-linux#:~:text=Alternatively%2C%20you%20can%20use%20the,to%20find%20the%20Java%20path.&text=The%20output%20tells%20you%20that,%2Fusr%2Fbin%2Fjava.&text=Inspecting%20the%20directory%20shows%20that,%2Fetc%2Falternatives%2Fjava.
