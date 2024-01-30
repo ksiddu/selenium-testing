@@ -13,13 +13,10 @@ import com.siddu.driver.TargetFactory;
 import com.siddu.pages.AmazonPage;
 import com.siddu.pages.DemoQAPage;
 import com.siddu.pages.GooglePage;
-import com.siddu.utils.BroswerFactory;
-import com.siddu.utils.DriverFactory;
 
 public class DemoQATests {
 
 	protected WebDriver driver;
-	BroswerFactory bf = new BroswerFactory();
 	String browser = "firefox";
 	AmazonPage amazonPage;
 	GooglePage googlePage;
@@ -73,6 +70,6 @@ public class DemoQATests {
 
 		System.out.println("with in tearDown() method - @AfterTest");
 		System.out.println("Tests are ending!");
-		DriverFactory.getInstance().quitDriver();
+		DriverManager.getInstance().quitDriver();
 	}
 }

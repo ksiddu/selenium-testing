@@ -16,12 +16,11 @@ import com.siddu.pages.AmazonPage;
 import com.siddu.pages.GooglePage;
 import com.siddu.pages.MicrosoftPage;
 import com.siddu.pages.YahooPage;
-import com.siddu.utils.BroswerFactory;
 
 public class BaseTest {
 
 	protected WebDriver driver;
-	BroswerFactory bf = new BroswerFactory();
+
 	// String browser = "chrome";
 	String browser = configuration().browser();
 	GooglePage googlePage;
