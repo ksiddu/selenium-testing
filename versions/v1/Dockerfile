@@ -5,14 +5,14 @@ RUN chmod -R 777 /apps/qa
 
 RUN apt-get -o Acquire::Check-Valid-Until=false update && apt-get install -y unzip
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    libasound2 \
-    gtk-3-examples \
-    libdbus-glib-1-2 \
-    libx11-xcb1 \
-    xvfb \
-    bzip2 \
-    libxtst6
+	apt-get install -y --no-install-recommends \
+	libasound2 \
+	gtk-3-examples \
+	libdbus-glib-1-2 \
+	libx11-xcb1 \
+	xvfb \
+	bzip2 \
+	libxtst6
 
 
 # download and install the firefox browser
@@ -34,6 +34,14 @@ RUN ls -la /usr/local/bin
 RUN chmod +x /usr/local/bin/geckodriver
 RUN ls -la /usr/local/bin
 
+#Copy source code and pom file.
+COPY src /apps/qa/src
+COPY pom.xml /apps/qa
+COPY testng.xml /apps/qa
+COPY smoke_testng.xml /apps/qa
+COPY regression_testng.xml /apps/qa
+COPY grid_testng.xml /apps/qa
+COPY firefox_grid_testng.xml /apps/qa
 
 ENV env_profile smoke
 ENV env_target local

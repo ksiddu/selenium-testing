@@ -44,3 +44,14 @@ mvn cheat sheet
 
 https://www.digitalocean.com/community/tutorials/maven-commands-options-cheat-sheet
 
+
+
+
+Dockerise Selenium tests
+============================
+
+
+https://medium.com/@suni.mothadikala/run-your-selenium-tests-inside-docker-container-part-1-9dfab15d1c86
+
+https://medium.com/@suni.mothadikala/run-your-selenium-tests-inside-docker-container-in-jenkins-part-2-eaae60eae601
+

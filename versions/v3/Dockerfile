@@ -5,14 +5,14 @@ RUN chmod -R 777 /apps/qa
 
 RUN apt-get -o Acquire::Check-Valid-Until=false update && apt-get install -y unzip
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    libasound2 \
-    gtk-3-examples \
-    libdbus-glib-1-2 \
-    libx11-xcb1 \
-    xvfb \
-    bzip2 \
-    libxtst6
+	apt-get install -y --no-install-recommends \
+	libasound2 \
+	gtk-3-examples \
+	libdbus-glib-1-2 \
+	libx11-xcb1 \
+	xvfb \
+	bzip2 \
+	libxtst6
 
 
 # download and install the firefox browser

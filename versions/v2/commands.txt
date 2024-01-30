@@ -1,0 +1,16 @@
+v2: src folders mounted with the  container
+
+To build the container
+
+docker buildx build --platform linux/amd64 -t selenium-test:2.0 .
+
+
+
+To run the container with default env variables
+
+docker run --platform linux/amd64 --rm -v $(pwd):/apps/qa selenium-test:2.0 
+
+To run the container with env variables
+
+docker run --platform linux/amd64 --rm -v $(pwd):/apps/qa -e "env_profile=regression" selenium-test:2.0
+ 

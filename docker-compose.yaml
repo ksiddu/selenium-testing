@@ -1,0 +1,9 @@
+version: '3'
+services:
+    selenium-test:
+        platform: linux/amd64
+        volumes:
+            - ./:/apps/qa
+        environment:
+            - env_profile=regression
+        image: selenium-test:3.0

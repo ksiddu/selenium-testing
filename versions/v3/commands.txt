@@ -1,0 +1,22 @@
+v3: src folders mounted with the container and docker-compose
+
+To build the container & run it
+
+docker-compose -f docker-compose.yaml up
+
+version: '3'
+services:
+    selenium-test:
+        platform: linux/amd64
+        volumes:
+            - ./:/apps/qa
+        environment:
+            - env_profile=regression
+        image: selenium-test:3.0
+
+
+To run the container with default env variables
+
+docker-compose -f docker-compose.yaml up
+
+

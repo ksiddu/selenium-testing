@@ -34,6 +34,14 @@ RUN ls -la /usr/local/bin
 RUN chmod +x /usr/local/bin/geckodriver
 RUN ls -la /usr/local/bin
 
+#Copy source code and pom file.
+COPY src /apps/qa/src
+COPY pom.xml /apps/qa
+COPY testng.xml /apps/qa
+COPY smoke_testng.xml /apps/qa
+COPY regression_testng.xml /apps/qa
+COPY grid_testng.xml /apps/qa
+COPY firefox_grid_testng.xml /apps/qa
 
 ENV env_profile smoke
 ENV env_target local
