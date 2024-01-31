@@ -18,6 +18,7 @@ import com.siddu.driver.DriverManager;
 import com.siddu.driver.TargetFactory;
 
 // https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java
+// https://www.browserstack.com/guide/wait-commands-in-selenium-webdriver
 public class WaitsTest {
 
 	protected WebDriver driver;
