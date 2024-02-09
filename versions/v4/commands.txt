@@ -1,0 +1,22 @@
+v4: src folders mounted with the  container with openjdk  21.0.2
+
+To build the container
+
+docker buildx build --platform linux/amd64 -t jdk21-test:1.0 .
+
+
+
+To run the container with default env variables
+
+docker run --platform linux/amd64 --rm -v $(pwd):/apps/qa jdk21-test:1.0 
+
+To run the container with env variables
+
+docker run --platform linux/amd64 --rm -v $(pwd):/apps/qa -e "env_profile=regression" jdk21-test:1.0
+ 
+ 
+To go into bash mode and override entry point
+ 
+docker run --platform linux/amd64 --rm -it --entrypoint /bin/bash jdk21-test:1.0
+ 
+docker run --platform linux/amd64 --rm -it --entrypoint /bin/bash jdk21-test:1.0
