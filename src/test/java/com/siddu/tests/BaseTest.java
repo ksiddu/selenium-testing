@@ -33,6 +33,8 @@ public class BaseTest {
 	@BeforeTest(alwaysRun = true)
 	@Parameters("browser")
 	public void preCondition(@Optional("chrome") String browser) {
+		
+		System.out.println("*****Browser Passed: "+ browser);
 		System.out.println("with in preCondition() method - @BeforeTest");
 		System.out.println("Tests are starting!");
 
