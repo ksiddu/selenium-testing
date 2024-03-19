@@ -5,6 +5,7 @@ import static com.siddu.config.ConfigurationManager.configuration;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
@@ -33,8 +34,8 @@ public class BaseTest {
 	@BeforeTest(alwaysRun = true)
 	@Parameters("browser")
 	public void preCondition(@Optional("chrome") String browser) {
-		
-		System.out.println("*****Browser Passed: "+ browser);
+
+		System.out.println("*****Browser Passed: " + browser);
 		System.out.println("with in preCondition() method - @BeforeTest");
 		System.out.println("Tests are starting!");
 
@@ -46,6 +47,7 @@ public class BaseTest {
 		yahooPage = new YahooPage(driver);
 		amazonPage = new AmazonPage(driver);
 		microsoftPage = new MicrosoftPage(driver);
+		printBrowserDetails(driver);
 	}
 
 	@AfterTest(alwaysRun = true)
@@ -59,6 +61,17 @@ public class BaseTest {
 
 	public WebDriver getDriver() {
 		return driver;
+	}
+
+	public void printBrowserDetails(WebDriver driver) {
+
+		System.out.println(
+				"Browser Name is : " + ((RemoteWebDriver) driver).getCapabilities().getBrowserName().toLowerCase());
+		System.out.println(
+				"Browser Version is : " + ((RemoteWebDriver) driver).getCapabilities().getBrowserVersion().toString());
+		System.out.println(
+				"Platform Name is : " + ((RemoteWebDriver) driver).getCapabilities().getPlatformName().toString());
+
 	}
 
 }

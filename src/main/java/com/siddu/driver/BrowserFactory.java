@@ -123,7 +123,8 @@ public enum BrowserFactory {
 
 	private static final String START_MAXIMIZED = "--start-maximized";
 	public static final String CHROME_HEADLESS = "--headless=new";
-	public static final String GENERIC_HEADLESS = "-headless";
+	//public static final String GENERIC_HEADLESS = "-headless";
+	public static final String GENERIC_HEADLESS = "--headless";
 
 	public abstract WebDriver createDriver();
 
